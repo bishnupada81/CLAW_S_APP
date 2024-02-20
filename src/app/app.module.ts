@@ -6,17 +6,27 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent } from './component/login-page/login-page.component';
 import { EnterAmountComponent } from './component/enter-amount/enter-amount.component';
 import { EnterPinComponent } from './component/enter-pin/enter-pin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PopUpComponent } from './component/pop-up/pop-up.component';
+import { LandingPageComponent } from './component/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     EnterAmountComponent,
-    EnterPinComponent
+    EnterPinComponent,
+    PopUpComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
