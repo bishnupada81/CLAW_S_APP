@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
 })
 export class EnterPinComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
   }
@@ -24,17 +24,20 @@ export class EnterPinComponent implements OnInit {
          ),
   })
 
-  get setPin() {
+  public get setPin() {
     return this.setPinForm.get('setPin');
   }
 
-  public setPinFormSubmit(){
+  public setPinFormSubmit() : void{
+
     Swal.fire({
+
       title: "Withdraw Successfull",
       confirmButtonText: "Okay",
+
     }).then((result) => {
 
-      this.router.navigate(['/']);
+      this._router.navigate(['/']);
 
     });
   }

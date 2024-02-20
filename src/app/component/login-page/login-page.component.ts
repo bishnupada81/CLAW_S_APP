@@ -24,16 +24,18 @@ export class LoginPageComponent implements OnInit {
          ),
   })
 
-  get phoneNumber() {
+  public get phoneNumber() {
     return this.mobileVerification.get('phoneNumber');
   }
 
-  public mobileVerificationFormSubmit(){
+  public mobileVerificationFormSubmit() : void{
+
     this.dialogRef.open(PopUpComponent, {
       width: '40%',
       autoFocus: false,
       restoreFocus: false,
     })
+
   }
 
 

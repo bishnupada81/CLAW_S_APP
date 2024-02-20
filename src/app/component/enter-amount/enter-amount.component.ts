@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class EnterAmountComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
   }
@@ -22,11 +22,11 @@ export class EnterAmountComponent implements OnInit {
          ),
   })
 
-  get phoneNumber() {
+  public get phoneNumber() {
     return this.amount.get('amount');
   }
 
-  public amountFormSubmit(){
-    this.router.navigateByUrl('/pin');
+  public amountFormSubmit() : void{
+    this._router.navigateByUrl('/pin');
   }
 }

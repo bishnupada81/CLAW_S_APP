@@ -15,7 +15,7 @@ export class PopUpComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public redirection(){
+  public redirection() : void{
     this.closePopup();
     this.router.navigateByUrl('/amount');
   }

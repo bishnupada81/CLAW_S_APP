@@ -8,13 +8,14 @@ import { Router } from '@angular/router';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
   }
 
-  public withdrawalAmount(){
-    this.router.navigateByUrl('/login');
+  public withdrawalAmount() : void{
+
+    this._router.navigateByUrl('/login');
 
   }
 
