@@ -6,7 +6,7 @@
   </div>
   <div class="mb-3">
     <label for="setYourPin" class="form-label">Enter Your 6 Digit Pin</label>
-    <input type="text" class="form-control" id="setYourPin" formControlName="setPin">
+    <input type="password" class="form-control" id="setYourPin" formControlName="setPin">
     <span style="color: red;" *ngIf="setPin && setPin.invalid && setPin.touched">This input is not valid</span>
   </div>
   <button type="submit" class="btn btn-primary text-center" [disabled]="setPinForm.invalid">Submit</button>
